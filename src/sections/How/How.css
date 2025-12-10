@@ -1,0 +1,70 @@
+.how {
+  padding: 120px 0;
+}
+.how-inner {
+  background: #ac71e3;
+  color: #f8f6ee;
+  border: 1px solid #1e1e25;
+  border-radius: 28px;
+  padding: 40px;
+  margin: 0 auto;
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .how-inner {
+    grid-template-columns: 1fr;
+  }
+}
+.how-copy h3 {
+  font-size: 28px;
+  margin: 8px 0 16px;
+}
+.how-list {
+  display: grid;
+  gap: 12px;
+  counter-reset: step;
+}
+.how-item {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  align-items: center;
+  gap: 12px;
+  background: #6100a5;
+  border: 1px solid #24242c;
+  color: #f8f6ee;
+  padding: 10px 12px;
+  border-radius: 12px;
+}
+.num {
+  display: inline-grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: #22222b;
+  color: #cfcfc8;
+  font-weight: 800;
+}
+.how-media {
+  position: relative;
+}
+.how-media img {
+  width: 100%;
+  border-radius: 18px;
+  display: block;
+}
+.raise {
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+  background: #ff8a1f;
+  color: #1b1005;
+  font-weight: 900;
+  padding: 8px 10px;
+  border-radius: 6px;
+}

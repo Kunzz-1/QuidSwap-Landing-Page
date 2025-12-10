@@ -1,0 +1,142 @@
+.account {
+  background: #ffffff;
+  color: #ac71e3;
+  padding: 72px 0;
+}
+.account-grid {
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  gap: 24px;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .account {
+    padding: 48px 0;
+  }
+  .account-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .phone {
+    width: 180px;
+    height: 360px;
+  }
+  .phone-bg {
+    max-width: 220px;
+    height: 180px;
+  }
+  .benefits {
+    left: 8px;
+    bottom: 8px;
+    padding: 8px;
+    gap: 5px;
+  }
+  .benefits li {
+    font-size: 12px;
+  }
+  .check {
+    width: 18px;
+    height: 18px;
+    font-size: 10px;
+  }
+  .section-title {
+    font-size: 24px;
+  }
+  .section-sub {
+    margin-bottom: 2rem;
+    font-size: 14px;
+  }
+}
+.account-image {
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+}
+.account-image img {
+  width: 100%;
+  display: block;
+}
+.benefits {
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+  display: grid;
+  gap: 10px;
+  padding: 12px;
+  border-radius: 12px;
+  backdrop-filter: blur(6px);
+  background: rgba(0, 0, 0, 0.35);
+  color: #eaf0ff;
+}
+.benefits li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.check {
+  display: inline-grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 999px;
+  background: var(--wa);
+  color: #09110b;
+  font-weight: 800;
+}
+.phone-wrap {
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+.phone-bg {
+  width: 100%;
+  max-width: 440px;
+  height: 360px;
+  border-radius: 20px;
+  background: #ffffff;
+}
+.phone {
+  position: absolute;
+  width: 280px;
+  height: 540px;
+  border-radius: 40px;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 20px 40px rgba(205, 64, 244, 0.955);
+}
+.phone-screen {
+  width: 86%;
+  height: 86%;
+  border-radius: 24px;
+  background: #fff;
+  padding: 16px;
+  display: grid;
+  gap: 12px;
+}
+.balance {
+  font-size: 28px;
+  font-weight: 800;
+}
+.tx-list {
+  display: grid;
+  gap: 8px;
+  color: #ac71e3;
+}
+.tx {
+  display: flex;
+  justify-content: space-between;
+}
+.pos {
+  color: #0b7a2a;
+  font-weight: 700;
+}
+.neg {
+  color: #a31515;
+  font-weight: 700;
+}
+
+.section-sub {
+  color: #690878;
+  margin-bottom: 8rem;
+}

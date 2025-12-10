@@ -1,0 +1,53 @@
+.community {
+  background: #ffffff;
+  color: #ac71e3;
+  padding: 72px 0;
+}
+.community-inner {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr 1fr;
+  align-items: center;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .community-inner {
+    grid-template-columns: 1fr;
+  }
+}
+.avatar-stack {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  justify-items: center;
+}
+.avatar-circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 999px;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 12px 28px rgba(172, 113, 227, 0.25);
+}
+
+@media (max-width: 768px) {
+  .avatar-circle {
+    width: 80px;
+    height: 80px;
+  }
+}
+.avatar-stack.left .avatar-circle:nth-child(1) {
+  transform: translateY(12px);
+}
+.avatar-stack.left .avatar-circle:nth-child(2) {
+  transform: translateY(-8px);
+}
+.avatar-stack.right .avatar-circle:nth-child(1) {
+  transform: translateY(-10px);
+}
+.avatar-stack.right .avatar-circle:nth-child(2) {
+  transform: translateY(6px);
+}
+.community .actions {
+  margin-top: 16px;
+}
