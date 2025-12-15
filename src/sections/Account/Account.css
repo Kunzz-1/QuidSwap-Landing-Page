@@ -1,51 +1,13 @@
 .account {
   background: #ffffff;
   color: #ac71e3;
-  padding: 72px 0;
+  padding: clamp(48px, 8vw, 72px) 0;
 }
 .account-grid {
   display: grid;
   grid-template-columns: 1fr 0.9fr;
-  gap: 24px;
+  gap: clamp(20px, 4vw, 24px);
   align-items: center;
-}
-@media (max-width: 768px) {
-  .account {
-    padding: 48px 0;
-  }
-  .account-grid {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-  .phone {
-    width: 180px;
-    height: 360px;
-  }
-  .phone-bg {
-    max-width: 220px;
-    height: 180px;
-  }
-  .benefits {
-    left: 8px;
-    bottom: 8px;
-    padding: 8px;
-    gap: 5px;
-  }
-  .benefits li {
-    font-size: 12px;
-  }
-  .check {
-    width: 18px;
-    height: 18px;
-    font-size: 10px;
-  }
-  .section-title {
-    font-size: 24px;
-  }
-  .section-sub {
-    margin-bottom: 2rem;
-    font-size: 14px;
-  }
 }
 .account-image {
   position: relative;
@@ -55,52 +17,61 @@
 .account-image img {
   width: 100%;
   display: block;
+  height: auto;
+  object-fit: cover;
+  max-width: 100%;
 }
 .benefits {
   position: absolute;
-  left: 16px;
-  bottom: 16px;
+  left: clamp(8px, 2vw, 16px);
+  bottom: clamp(8px, 2vw, 16px);
   display: grid;
-  gap: 10px;
-  padding: 12px;
+  gap: clamp(6px, 1.5vw, 10px);
+  padding: clamp(8px, 2vw, 12px);
   border-radius: 12px;
   backdrop-filter: blur(6px);
   background: rgba(0, 0, 0, 0.35);
   color: #eaf0ff;
+  max-width: calc(100% - 32px);
 }
 .benefits li {
   list-style: none;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: clamp(6px, 1.5vw, 10px);
+  font-size: clamp(12px, 2vw, 14px);
+  white-space: nowrap;
 }
 .check {
   display: inline-grid;
   place-items: center;
-  width: 24px;
-  height: 24px;
+  width: clamp(18px, 3vw, 24px);
+  height: clamp(18px, 3vw, 24px);
   border-radius: 999px;
   background: var(--wa);
   color: #09110b;
   font-weight: 800;
+  font-size: clamp(10px, 1.5vw, 12px);
+  flex-shrink: 0;
 }
 .phone-wrap {
   position: relative;
   display: grid;
   place-items: center;
+  padding: 20px 0;
 }
 .phone-bg {
   width: 100%;
-  max-width: 440px;
-  height: 360px;
+  max-width: clamp(280px, 50vw, 440px);
+  height: clamp(240px, 40vw, 360px);
   border-radius: 20px;
   background: #ffffff;
 }
 .phone {
   position: absolute;
-  width: 280px;
-  height: 540px;
-  border-radius: 40px;
+  width: clamp(200px, 35vw, 280px);
+  height: clamp(380px, 65vw, 540px);
+  border-radius: clamp(30px, 5vw, 40px);
   display: grid;
   place-items: center;
   box-shadow: 0 20px 40px rgba(205, 64, 244, 0.955);
@@ -110,22 +81,24 @@
   height: 86%;
   border-radius: 24px;
   background: #fff;
-  padding: 16px;
+  padding: clamp(12px, 2vw, 16px);
   display: grid;
-  gap: 12px;
+  gap: clamp(8px, 1.5vw, 12px);
 }
 .balance {
-  font-size: 28px;
+  font-size: clamp(20px, 4vw, 28px);
   font-weight: 800;
 }
 .tx-list {
   display: grid;
-  gap: 8px;
+  gap: clamp(6px, 1.5vw, 8px);
   color: #ac71e3;
 }
 .tx {
   display: flex;
   justify-content: space-between;
+  font-size: clamp(12px, 2vw, 14px);
+  gap: 8px;
 }
 .pos {
   color: #0b7a2a;
@@ -138,5 +111,88 @@
 
 .section-sub {
   color: #690878;
-  margin-bottom: 8rem;
+  margin-bottom: clamp(3rem, 8vw, 8rem);
+  font-size: clamp(14px, 2vw, 16px);
+}
+
+/* Tablet styles */
+@media (max-width: 1024px) and (min-width: 900px) {
+  .account-grid {
+    gap: 20px;
+  }
+  .phone-bg {
+    max-width: 380px;
+    height: 320px;
+  }
+  .phone {
+    width: 240px;
+    height: 460px;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 899px) {
+  .account {
+    padding: 48px 0;
+  }
+  .account-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .phone-wrap {
+    order: -1;
+  }
+  .phone-bg {
+    max-width: 280px;
+    height: 240px;
+  }
+  .phone {
+    width: 200px;
+    height: 380px;
+  }
+  .benefits {
+    left: 8px;
+    bottom: 8px;
+    padding: 10px;
+  }
+  .benefits li {
+    font-size: 12px;
+  }
+  .check {
+    width: 18px;
+    height: 18px;
+    font-size: 10px;
+  }
+  .section-sub {
+    margin-bottom: 2rem;
+    font-size: 14px;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .account {
+    padding: 40px 0;
+  }
+  .phone-bg {
+    max-width: 240px;
+    height: 200px;
+  }
+  .phone {
+    width: 180px;
+    height: 340px;
+  }
+  .benefits {
+    padding: 8px;
+    gap: 5px;
+  }
+  .benefits li {
+    font-size: 11px;
+  }
+  .balance {
+    font-size: 18px;
+  }
+  .tx {
+    font-size: 11px;
+  }
 }

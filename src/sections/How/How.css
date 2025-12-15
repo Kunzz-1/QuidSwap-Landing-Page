@@ -1,28 +1,23 @@
 .how {
-  padding: 120px 0;
+  padding: clamp(60px, 10vw, 120px) 0;
 }
 .how-inner {
   background: #ac71e3;
   color: #f8f6ee;
   border: 1px solid #1e1e25;
-  border-radius: 28px;
-  padding: 40px;
+  border-radius: clamp(20px, 3vw, 28px);
+  padding: clamp(24px, 4vw, 40px);
   margin: 0 auto;
   max-width: 1000px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 32px;
+  gap: clamp(24px, 4vw, 32px);
   align-items: center;
 }
-
-@media (max-width: 768px) {
-  .how-inner {
-    grid-template-columns: 1fr;
-  }
-}
 .how-copy h3 {
-  font-size: 28px;
+  font-size: clamp(24px, 4vw, 28px);
   margin: 8px 0 16px;
+  line-height: 1.3;
 }
 .how-list {
   display: grid;
@@ -31,40 +26,91 @@
 }
 .how-item {
   display: grid;
-  grid-template-columns: 40px 1fr;
+  grid-template-columns: clamp(32px, 5vw, 40px) 1fr;
   align-items: center;
-  gap: 12px;
+  gap: clamp(10px, 2vw, 12px);
   background: #6100a5;
   border: 1px solid #24242c;
   color: #f8f6ee;
-  padding: 10px 12px;
-  border-radius: 12px;
+  padding: clamp(12px, 2vw, 14px) clamp(12px, 2.5vw, 16px);
+  border-radius: clamp(10px, 1.5vw, 12px);
+  font-size: clamp(15px, 2.5vw, 17px);
+  line-height: 1.6;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 .num {
   display: inline-grid;
   place-items: center;
-  width: 32px;
-  height: 32px;
-  border-radius: 8px;
+  width: clamp(30px, 4.5vw, 36px);
+  height: clamp(30px, 4.5vw, 36px);
+  border-radius: clamp(6px, 1vw, 8px);
   background: #22222b;
   color: #cfcfc8;
   font-weight: 800;
+  font-size: clamp(13px, 2.2vw, 15px);
+  flex-shrink: 0;
 }
 .how-media {
   position: relative;
 }
 .how-media img {
   width: 100%;
-  border-radius: 18px;
+  border-radius: clamp(14px, 2.5vw, 18px);
   display: block;
+  height: auto;
+  object-fit: cover;
+  max-width: 100%;
 }
 .raise {
   position: absolute;
-  left: 16px;
-  bottom: 16px;
+  left: clamp(8px, 2vw, 16px);
+  bottom: clamp(8px, 2vw, 16px);
   background: #ff8a1f;
   color: #1b1005;
   font-weight: 900;
-  padding: 8px 10px;
+  padding: clamp(6px, 1.5vw, 8px) clamp(8px, 2vw, 10px);
   border-radius: 6px;
+  font-size: clamp(12px, 2vw, 14px);
+}
+
+/* Tablet styles */
+@media (max-width: 1024px) and (min-width: 900px) {
+  .how-inner {
+    gap: 28px;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 899px) {
+  .how {
+    padding: 60px 0;
+  }
+  .how-inner {
+    grid-template-columns: 1fr;
+    padding: 24px;
+    gap: 32px;
+  }
+  .how-copy h3 {
+    font-size: 24px;
+  }
+  .how-media {
+    order: -1;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .how {
+    padding: 40px 0;
+  }
+  .how-inner {
+    padding: 20px;
+  }
+  .how-copy h3 {
+    font-size: 20px;
+  }
+  .how-item {
+    padding: 10px;
+  }
 }

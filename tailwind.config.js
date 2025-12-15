@@ -1,11 +1,3 @@
-/** @type {import('tailwindcss').Config} */
-export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,jsx,ts,tsx}",
-  ],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
-};
+// Tailwind CSS v4 uses @theme in CSS instead of this config file
+// Configuration is now done in src/index.css using @theme directive
+export default {};

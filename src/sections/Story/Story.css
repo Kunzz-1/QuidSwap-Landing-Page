@@ -1,14 +1,13 @@
 .story {
   background: #ffffff;
   color: #ac71e3;
-  padding: 72px 0;
+  padding: clamp(48px, 8vw, 72px) 0;
 }
 .story-lead {
   display: inline-block;
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 1.2px;
-  /* border: 1px solid #e7e1c8; */
   border-radius: 999px;
   padding: 6px 10px;
   color: #6b664f;
@@ -17,22 +16,32 @@
 .story-grid {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
-  gap: 40px;
+  gap: clamp(24px, 4vw, 40px);
   align-items: start;
 }
 .story-text h2 {
   margin-top: 0;
-  font-size: 28px;
-  margin: 70px 0 12px;
+  font-size: clamp(24px, 4vw, 28px);
+  margin: clamp(24px, 6vw, 70px) 0 12px;
+  line-height: 1.3;
 }
 .story-text p {
   color: #5c5c70;
-  /* margin: 0 0 12px; */
+  font-size: clamp(14px, 2vw, 16px);
+  line-height: 1.6;
+  margin: 0 0 12px;
 }
 .story-collage {
   position: relative;
-  height: 395px;
-  overflow: hidden;
+  height: clamp(280px, 50vw, 450px);
+  overflow: visible;
+  min-height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 16px;
+  padding-left: 16px;
+  box-sizing: border-box;
 }
 .story-collage img {
   position: absolute;
@@ -40,56 +49,176 @@
   clip-path: circle(50% at 50% 50%);
   aspect-ratio: 1 / 1;
   object-fit: cover;
-  /* box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15); */
+  max-width: 100%;
+  height: auto;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
+
+.story-collage.visible img.stagger-1,
+.story-collage.visible img.stagger-2,
+.story-collage.visible img.stagger-3 {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* QDX Coin - Top Center (Triangle Top) */
 .story-collage img:nth-child(1) {
-  width: 190px;
-  left: 30%;
-  top: 65%;
-  transform: translate(-50%, -50%);
+  width: clamp(140px, 22vw, 200px);
+  left: 50%;
+  top: 10%;
+  transform: translate(-50%, 0);
   z-index: 3;
 }
+
+.story-collage.visible img.stagger-1 {
+  transform: translate(-50%, 0) scale(1);
+}
+
+/* USDT Coin - Bottom Left (Triangle Bottom Left) */
 .story-collage img:nth-child(2) {
-  width: 190px;
-  left: 29%;
-  /* top: 1%; */
-  transform: rotate(-6deg);
+  width: clamp(130px, 20vw, 190px);
+  left: 20%;
+  top: 65%;
+  transform: translate(-50%, -50%);
   z-index: 2;
 }
+
+.story-collage.visible img.stagger-2 {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* BTC Coin - Bottom Right (Triangle Bottom Right) */
 .story-collage img:nth-child(3) {
-  width: 195px;
-  left: 47%;
-  top: 41%;
-  transform: rotate(6deg);
+  width: clamp(130px, 20vw, 190px);
+  left: 78%;
+  top: 65%;
+  transform: translate(-50%, -50%);
   z-index: 1;
 }
 
+.story-collage.visible img.stagger-3 {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Tablet styles */
+@media (max-width: 1024px) and (min-width: 900px) {
+  .story-grid {
+    gap: 32px;
+  }
+  .story-collage {
+    height: 350px;
+    padding-right: 32px;
+    padding-left: 16px;
+    margin-right: -16px;
+  }
+  .story-collage img:nth-child(1) {
+    width: 160px;
+    top: 12%;
+    left: 50%;
+  }
+  .story-collage img:nth-child(2) {
+    width: 150px;
+    left: 22%;
+    top: 68%;
+  }
+  .story-collage img:nth-child(3) {
+    width: 150px;
+    left: 73%;
+    top: 68%;
+    max-width: calc(100% - 32px);
+  }
+}
+
+/* Mobile styles */
 @media (max-width: 899px) {
   .story {
     padding: 48px 0;
   }
   .story-grid {
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 32px;
   }
   .story-text h2 {
-    font-size: 20px;
+    font-size: clamp(20px, 6vw, 24px);
     margin-top: 0;
+    margin-bottom: 16px;
+  }
+  .story-text p {
+    font-size: 15px;
   }
   .story-collage {
-    height: 220px;
+    height: 280px;
+    margin-top: 24px;
   }
   .story-collage img:nth-child(1) {
     width: 120px;
+    left: 50%;
+    top: 10%;
+    transform: translate(-50%, 0);
+  }
+  .story-collage img:nth-child(2) {
+    width: 110px;
+    left: 20%;
+    top: 65%;
+    transform: translate(-50%, -50%);
+  }
+  .story-collage img:nth-child(3) {
+    width: 110px;
+    left: 80%;
+    top: 65%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .story-collage.visible img.stagger-1 {
+    transform: translate(-50%, 0) scale(1);
+  }
+  .story-collage.visible img.stagger-2,
+  .story-collage.visible img.stagger-3 {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .story {
+    padding: 40px 0;
+  }
+  .story-text h2 {
+    font-size: 20px;
+  }
+  .story-text p {
+    font-size: 14px;
+  }
+  .story-collage {
+    height: 240px;
+  }
+  .story-collage img:nth-child(1) {
+    width: 100px;
+    left: 50%;
+    top: 8%;
+    transform: translate(-50%, 0);
   }
   .story-collage img:nth-child(2) {
     width: 90px;
-    left: calc(50% - 70px);
-    top: calc(50% - 30px);
+    left: 18%;
+    top: 68%;
+    transform: translate(-50%, -50%);
   }
   .story-collage img:nth-child(3) {
-    width: 80px;
-    left: calc(50% + 45px);
-    top: calc(50% - 10px);
+    width: 90px;
+    left: 82%;
+    top: 68%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .story-collage.visible img.stagger-1 {
+    transform: translate(-50%, 0) scale(1);
+  }
+  .story-collage.visible img.stagger-2,
+  .story-collage.visible img.stagger-3 {
+    transform: translate(-50%, -50%) scale(1);
   }
 }

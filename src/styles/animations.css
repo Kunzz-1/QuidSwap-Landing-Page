@@ -1,0 +1,265 @@
+/* Scroll Animation Classes */
+
+/* Fade In */
+.fade-in {
+  opacity: 0;
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+}
+
+/* Fade In Up */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Fade In Down */
+.fade-in-down {
+  opacity: 0;
+  transform: translateY(-40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in-down.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Fade In Left */
+.fade-in-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Fade In Right */
+.fade-in-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Scale In */
+.scale-in {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.scale-in.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Scale In with Bounce */
+.scale-in-bounce {
+  opacity: 0;
+  transform: scale(0.5);
+  transition: opacity 0.6s ease-out, transform 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.scale-in-bounce.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Rotate In */
+.rotate-in {
+  opacity: 0;
+  transform: rotate(-10deg) scale(0.9);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.rotate-in.visible {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+
+/* Slide In with Fade */
+.slide-fade {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.slide-fade.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger Animation Delay - Only apply when parent is visible */
+.stagger-1 { 
+  opacity: 0;
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transition-delay: 0.1s; 
+}
+.stagger-1.visible {
+  opacity: 1;
+}
+
+.stagger-2 { 
+  opacity: 0;
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transition-delay: 0.2s; 
+}
+.stagger-2.visible {
+  opacity: 1;
+}
+
+.stagger-3 { 
+  opacity: 0;
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transition-delay: 0.3s; 
+}
+.stagger-3.visible {
+  opacity: 1;
+}
+
+.stagger-4 { 
+  opacity: 0;
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transition-delay: 0.4s; 
+}
+.stagger-4.visible {
+  opacity: 1;
+}
+
+.stagger-5 { 
+  opacity: 0;
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transition-delay: 0.5s; 
+}
+.stagger-5.visible {
+  opacity: 1;
+}
+
+.stagger-6 { 
+  opacity: 0;
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transition-delay: 0.6s; 
+}
+.stagger-6.visible {
+  opacity: 1;
+}
+
+/* Smooth reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Blur In */
+.blur-in {
+  opacity: 0;
+  filter: blur(10px);
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, filter 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.blur-in.visible {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+}
+
+/* Flip In */
+.flip-in {
+  opacity: 0;
+  transform: perspective(1000px) rotateY(-90deg);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.flip-in.visible {
+  opacity: 1;
+  transform: perspective(1000px) rotateY(0deg);
+}
+
+/* Ensure stagger animations inherit parent visibility */
+.fade-in-up.stagger-1,
+.fade-in-up.stagger-2,
+.fade-in-up.stagger-3,
+.fade-in-up.stagger-4,
+.fade-in-left.stagger-1,
+.fade-in-left.stagger-2,
+.fade-in-left.stagger-3,
+.fade-in-right.stagger-1,
+.fade-in-right.stagger-2,
+.fade-in-right.stagger-3 {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.fade-in-up.stagger-1.visible,
+.fade-in-up.stagger-2.visible,
+.fade-in-up.stagger-3.visible,
+.fade-in-up.stagger-4.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-in-left.stagger-1.visible,
+.fade-in-left.stagger-2.visible,
+.fade-in-left.stagger-3.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.fade-in-right.stagger-1.visible,
+.fade-in-right.stagger-2.visible,
+.fade-in-right.stagger-3.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .fade-in,
+  .fade-in-up,
+  .fade-in-down,
+  .fade-in-left,
+  .fade-in-right,
+  .scale-in,
+  .scale-in-bounce,
+  .rotate-in,
+  .slide-fade,
+  .reveal,
+  .blur-in,
+  .flip-in,
+  .stagger-1,
+  .stagger-2,
+  .stagger-3,
+  .stagger-4,
+  .stagger-5,
+  .stagger-6 {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+    transition: none !important;
+  }
+}
+

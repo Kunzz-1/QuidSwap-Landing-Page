@@ -363,14 +363,15 @@
 }
 .ticker-track {
   display: inline-flex;
-  gap: 32px;
-  padding: 1px 0;
+  gap: clamp(16px, 4vw, 32px);
+  padding: clamp(8px, 1.5vw, 12px) 0;
   white-space: nowrap;
   animation: ticker 18s linear infinite;
 }
 .ticker-item {
   font-weight: 800;
   letter-spacing: 0.8px;
+  font-size: clamp(12px, 2vw, 16px);
 }
 @keyframes ticker {
   from {
@@ -378,6 +379,16 @@
   }
   to {
     transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 480px) {
+  .ticker-track {
+    gap: 12px;
+    padding: 10px 0;
+  }
+  .ticker-item {
+    font-size: 12px;
   }
 }
 .story {

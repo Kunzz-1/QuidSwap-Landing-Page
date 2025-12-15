@@ -1,19 +1,20 @@
 .footer {
   background: #ac71e3;
   color: #ffffff;
-  padding: 40px 0 24px;
+  padding: clamp(32px, 5vw, 40px) 0 clamp(20px, 3vw, 24px);
 }
 
 .footer-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 24px;
+  gap: clamp(20px, 3vw, 24px);
   align-items: start;
 }
 
 .footer-contact p {
   margin: 0 0 8px;
   color: #cfcfc8;
+  font-size: clamp(13px, 2vw, 14px);
 }
 
 .footer-email {
@@ -23,30 +24,42 @@
   display: inline-flex;
   align-items: center;
   gap: 4px;
+  font-size: clamp(14px, 2vw, 16px);
+  word-break: break-word;
 }
 
 .footer-email .arrow {
   font-size: 12px;
+  flex-shrink: 0;
 }
 
 .footer-nav {
   display: flex;
-  gap: 20px;
+  gap: clamp(12px, 2.5vw, 20px);
   justify-content: flex-end;
+  flex-wrap: wrap;
 }
 
 .footer-nav a {
   color: #fff;
   text-decoration: none;
+  font-size: clamp(13px, 2vw, 14px);
+  white-space: nowrap;
+  transition: opacity 0.2s ease;
+}
+
+.footer-nav a:hover {
+  opacity: 0.8;
 }
 
 .footer-logo {
   grid-column: 1 / -1;
   text-align: center;
+  margin-top: 8px;
 }
 
 .footer-logo img {
-  max-width: 50%;
+  max-width: clamp(120px, 20vw, 200px);
   height: auto;
 }
 
@@ -55,23 +68,44 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 24px;
+  padding-top: clamp(20px, 3vw, 24px);
   border-top: 1px solid rgba(255, 255, 255, 0.1);
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.footer-bottom span {
+  font-size: clamp(12px, 2vw, 14px);
+  color: #cfcfc8;
 }
 
 .footer-social a {
   color: #cfcfc8;
   text-decoration: none;
   margin-left: 16px;
+  font-size: clamp(12px, 2vw, 14px);
 }
 
+/* Tablet styles */
+@media (max-width: 1024px) and (min-width: 900px) {
+  .footer-nav {
+    gap: 16px;
+  }
+}
+
+/* Mobile styles */
 @media (max-width: 899px) {
+  .footer {
+    padding: 32px 0 20px;
+  }
   .footer-grid {
     grid-template-columns: 1fr;
+    gap: 24px;
   }
 
   .footer-nav {
     justify-content: flex-start;
+    gap: 16px;
   }
 
   .footer-bottom {
@@ -81,6 +115,28 @@
   }
 
   .footer-social {
-    margin-top: 12px;
+    margin-top: 0;
+  }
+  
+  .footer-social a {
+    margin-left: 0;
+    margin-right: 16px;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .footer {
+    padding: 24px 0 16px;
+  }
+  .footer-grid {
+    gap: 20px;
+  }
+  .footer-nav {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .footer-logo img {
+    max-width: 150px;
   }
 }
