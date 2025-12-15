@@ -1,5 +1,4 @@
-import './App.css'
-import './styles/base.css'
+import './styles/animations.css'
 import Header from './layout/Header'
 import Footer from './layout/Footer'
 import Hero from './sections/Hero/Hero'
@@ -14,28 +13,19 @@ import Community from './sections/Community/Community'
 
 function App() {
   return (
-    <div className="page">
+    <div className="bg-white text-primary overflow-x-hidden min-h-screen">
       <Header />
 
-      <main>
+      <main className="w-full">
         <Hero />
-
         <Story />
-
         <Hub />
-
         <Account />
-        
-
         <How />
-
         <Community />
         <Testimonials />
-
         <FAQ />
-
         <AboutUs />
-
       </main>
 
       <Footer />

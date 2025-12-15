@@ -1,40 +1,29 @@
 .community {
   background: #ffffff;
   color: #ac71e3;
-  padding: 72px 0;
+  padding: clamp(48px, 8vw, 72px) 0;
 }
 .community-inner {
   display: grid;
   grid-template-columns: 1fr 1.2fr 1fr;
   align-items: center;
-  gap: 20px;
-}
-
-@media (max-width: 768px) {
-  .community-inner {
-    grid-template-columns: 1fr;
-  }
+  gap: clamp(16px, 3vw, 20px);
 }
 .avatar-stack {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
+  gap: clamp(12px, 2vw, 16px);
   justify-items: center;
 }
 .avatar-circle {
-  width: 120px;
-  height: 120px;
+  width: clamp(80px, 12vw, 120px);
+  height: clamp(80px, 12vw, 120px);
   border-radius: 999px;
   background-size: cover;
   background-position: center;
   box-shadow: 0 12px 28px rgba(172, 113, 227, 0.25);
-}
-
-@media (max-width: 768px) {
-  .avatar-circle {
-    width: 80px;
-    height: 80px;
-  }
+  object-fit: cover;
+  max-width: 100%;
 }
 .avatar-stack.left .avatar-circle:nth-child(1) {
   transform: translateY(12px);
@@ -50,4 +39,56 @@
 }
 .community .actions {
   margin-top: 16px;
+}
+
+/* Tablet styles */
+@media (max-width: 1024px) and (min-width: 900px) {
+  .community-inner {
+    gap: 18px;
+  }
+  .avatar-circle {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 899px) {
+  .community {
+    padding: 48px 0;
+  }
+  .community-inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .community-copy {
+    order: -1;
+    text-align: center;
+  }
+  .avatar-stack {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+  .avatar-circle {
+    width: 70px;
+    height: 70px;
+  }
+  .avatar-stack.left .avatar-circle,
+  .avatar-stack.right .avatar-circle {
+    transform: none;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .community {
+    padding: 40px 0;
+  }
+  .avatar-stack {
+    gap: 8px;
+  }
+  .avatar-circle {
+    width: 60px;
+    height: 60px;
+  }
 }

@@ -3,32 +3,80 @@
   background-image: url("/5.jpg");
   background-size: cover;
   background-position: center;
-  padding: 80px 0;
+  background-attachment: fixed;
+  padding: clamp(60px, 10vw, 80px) 0;
 }
 
 .about-us-overlay {
   background: rgba(0, 0, 0, 0.617);
-  padding: 40px 0;
+  padding: clamp(30px, 5vw, 40px) 0;
   color: #fff;
   text-align: center;
 }
 
 .about-us-title {
-  font-size: 48px;
-  margin-bottom: 30px;
+  font-size: clamp(32px, 6vw, 48px);
+  margin-bottom: clamp(20px, 4vw, 30px);
   color: var(--primary-color);
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: clamp(1px, 0.3vw, 2px);
+  line-height: 1.2;
 }
 
 .about-us p {
-  font-size: 1.2em;
+  font-size: clamp(16px, 2.5vw, 1.2em);
   line-height: 1.8;
   max-width: 800px;
-  margin: 0 auto 20px auto;
+  margin: 0 auto clamp(15px, 3vw, 20px) auto;
   color: #e0e0e0;
+  padding: 0 16px;
 }
 
 .about-us p:last-of-type {
   margin-bottom: 0;
+}
+
+/* Tablet styles */
+@media (max-width: 1024px) and (min-width: 900px) {
+  .about-us {
+    background-attachment: scroll;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 899px) {
+  .about-us {
+    padding: 48px 0;
+    background-attachment: scroll;
+  }
+  .about-us-overlay {
+    padding: 30px 0;
+  }
+  .about-us-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  .about-us p {
+    font-size: 16px;
+    padding: 0 16px;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .about-us {
+    padding: 40px 0;
+  }
+  .about-us-overlay {
+    padding: 24px 0;
+  }
+  .about-us-title {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+  .about-us p {
+    font-size: 14px;
+    line-height: 1.6;
+    padding: 0 12px;
+  }
 }
