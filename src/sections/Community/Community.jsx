@@ -6,7 +6,7 @@ function Community() {
   const [rightAvatarsRef, rightAvatarsVisible] = useScrollAnimation({ threshold: 0.2 })
 
   return (
-    <section id="community" className="bg-white text-primary py-12 sm:py-16 md:py-20 lg:py-24">
+    <section id="community" className="bg-[#FDFCF8] text-primary py-12 sm:py-16 md:py-20 lg:py-24">
       <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr_1fr] gap-5 sm:gap-6 items-center">
           <div 

@@ -103,18 +103,10 @@ function Header() {
             <a 
               href="#story" 
               onClick={closeMenu}
-              className={`block md:inline-block text-sm md:text-base font-medium whitespace-nowrap transition-colors duration-300 ${
+              className={`block md:inline-block text-sm md:text-base font-medium whitespace-nowrap transition-colors duration-300 text-white hover:text-[#c9a5f0] ${
                 isMenuOpen 
-                  ? 'px-5 py-3 md:px-0 md:py-0 text-white md:text-muted hover:bg-white/10 md:hover:bg-transparent' 
-                  : 'text-white md:text-muted'
-              } ${
-                isScrolled && isMenuOpen
-                  ? 'text-muted hover:text-primary hover:bg-primary/10'
+                  ? 'px-5 py-3 md:px-0 md:py-0 hover:bg-white/10 md:hover:bg-transparent' 
                   : ''
-              } ${
-                isScrolled && !isMenuOpen
-                  ? 'text-muted hover:text-primary'
-                  : 'md:text-[#e6e7ee] md:hover:text-white'
               }`}
             >
               Exchange
@@ -122,18 +114,10 @@ function Header() {
             <a 
               href="#account" 
               onClick={closeMenu}
-              className={`block md:inline-block text-sm md:text-base font-medium whitespace-nowrap transition-colors duration-300 ${
+              className={`block md:inline-block text-sm md:text-base font-medium whitespace-nowrap transition-colors duration-300 text-white hover:text-[#c9a5f0] ${
                 isMenuOpen 
-                  ? 'px-5 py-3 md:px-0 md:py-0 text-white md:text-muted hover:bg-white/10 md:hover:bg-transparent' 
-                  : 'text-white md:text-muted'
-              } ${
-                isScrolled && isMenuOpen
-                  ? 'text-muted hover:text-primary hover:bg-primary/10'
+                  ? 'px-5 py-3 md:px-0 md:py-0 hover:bg-white/10 md:hover:bg-transparent' 
                   : ''
-              } ${
-                isScrolled && !isMenuOpen
-                  ? 'text-muted hover:text-primary'
-                  : 'md:text-[#e6e7ee] md:hover:text-white'
               }`}
             >
               Payouts
@@ -141,18 +125,10 @@ function Header() {
             <a 
               href="#community" 
               onClick={closeMenu}
-              className={`block md:inline-block text-sm md:text-base font-medium whitespace-nowrap transition-colors duration-300 ${
+              className={`block md:inline-block text-sm md:text-base font-medium whitespace-nowrap transition-colors duration-300 text-white hover:text-[#c9a5f0] ${
                 isMenuOpen 
-                  ? 'px-5 py-3 md:px-0 md:py-0 text-white md:text-muted hover:bg-white/10 md:hover:bg-transparent' 
-                  : 'text-white md:text-muted'
-              } ${
-                isScrolled && isMenuOpen
-                  ? 'text-muted hover:text-primary hover:bg-primary/10'
+                  ? 'px-5 py-3 md:px-0 md:py-0 hover:bg-white/10 md:hover:bg-transparent' 
                   : ''
-              } ${
-                isScrolled && !isMenuOpen
-                  ? 'text-muted hover:text-primary'
-                  : 'md:text-[#e6e7ee] md:hover:text-white'
               }`}
             >
               Community
@@ -160,18 +136,10 @@ function Header() {
             <a 
               href="#about-us" 
               onClick={closeMenu}
-              className={`block md:inline-block text-sm md:text-base font-medium whitespace-nowrap transition-colors duration-300 ${
+              className={`block md:inline-block text-sm md:text-base font-medium whitespace-nowrap transition-colors duration-300 text-white hover:text-[#c9a5f0] ${
                 isMenuOpen 
-                  ? 'px-5 py-3 md:px-0 md:py-0 text-white md:text-muted hover:bg-white/10 md:hover:bg-transparent' 
-                  : 'text-white md:text-muted'
-              } ${
-                isScrolled && isMenuOpen
-                  ? 'text-muted hover:text-primary hover:bg-primary/10'
+                  ? 'px-5 py-3 md:px-0 md:py-0 hover:bg-white/10 md:hover:bg-transparent' 
                   : ''
-              } ${
-                isScrolled && !isMenuOpen
-                  ? 'text-muted hover:text-primary'
-                  : 'md:text-[#e6e7ee] md:hover:text-white'
               }`}
             >
               About Us

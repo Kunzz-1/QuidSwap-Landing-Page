@@ -35,7 +35,7 @@ function Testimonials() {
       name: 'Zach',
       handle: '@zcobrams',
       avatar: 'Z',
-      bgColor: 'bg-white',
+      bgColor: 'bg-[#FDFCF8]',
       textColor: 'text-primary',
       handleColor: 'text-[#6b664f]',
       rotation: 'rotate-2',
@@ -58,7 +58,7 @@ function Testimonials() {
   const baseCardClasses = 'rounded-2xl p-4 sm:p-5 border border-slate-500/30 shadow-[0_20px_40px_rgba(0,0,0,0.08)] flex flex-col min-h-0 fade-in-up transition-all duration-[4000ms] hover:scale-105 hover:-translate-y-2 hover:shadow-[0_25px_50px_rgba(0,0,0,0.15)] cursor-pointer'
 
   return (
-    <section id="testimonials" className="bg-white text-primary py-12 sm:py-16 md:py-20 lg:py-24">
+    <section id="testimonials" className="bg-[#FDFCF8] text-primary py-12 sm:py-16 md:py-20 lg:py-24">
       <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div ref={titleRef} className={`fade-in-up ${titleVisible ? 'visible' : ''} text-center mb-6 sm:mb-8`}>
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[36px] font-bold mb-2 sm:mb-4 leading-tight">

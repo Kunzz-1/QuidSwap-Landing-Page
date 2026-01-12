@@ -13,7 +13,7 @@ import Community from './sections/Community/Community'
 
 function App() {
   return (
-    <div className="bg-white text-primary overflow-x-hidden min-h-screen">
+    <div className="bg-[#e9daeb] text-primary overflow-x-hidden min-h-screen">
       <Header />
 
       <main className="w-full">

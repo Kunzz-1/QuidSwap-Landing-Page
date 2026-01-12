@@ -21,15 +21,15 @@ function How() {
             <ol className="grid gap-3 sm:gap-4">
               <li className={`grid grid-cols-[32px_1fr] sm:grid-cols-[36px_1fr] md:grid-cols-[40px_1fr] items-center gap-3 sm:gap-4 bg-[#6100a5] border border-[#24242c] text-[#f8f6ee] px-3 sm:px-4 py-2.5 sm:py-3.5 rounded-xl text-sm sm:text-base md:text-lg leading-relaxed break-words stagger-1 ${copyVisible ? 'visible' : ''}`}>
                 <span className="inline-grid place-items-center w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-[#22222b] text-[#cfcfc8] font-extrabold text-xs sm:text-sm md:text-base flex-shrink-0">01</span>
-                Open WhatsApp and message QuidSwap
+                Chat QuidSwap
               </li>
               <li className={`grid grid-cols-[32px_1fr] sm:grid-cols-[36px_1fr] md:grid-cols-[40px_1fr] items-center gap-3 sm:gap-4 bg-[#6100a5] border border-[#24242c] text-[#f8f6ee] px-3 sm:px-4 py-2.5 sm:py-3.5 rounded-xl text-sm sm:text-base md:text-lg leading-relaxed break-words stagger-2 ${copyVisible ? 'visible' : ''}`}>
                 <span className="inline-grid place-items-center w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-[#22222b] text-[#cfcfc8] font-extrabold text-xs sm:text-sm md:text-base flex-shrink-0">02</span>
-                Confirm rates, share payout details
+                Send crypto
               </li>
               <li className={`grid grid-cols-[32px_1fr] sm:grid-cols-[36px_1fr] md:grid-cols-[40px_1fr] items-center gap-3 sm:gap-4 bg-[#6100a5] border border-[#24242c] text-[#f8f6ee] px-3 sm:px-4 py-2.5 sm:py-3.5 rounded-xl text-sm sm:text-base md:text-lg leading-relaxed break-words stagger-3 ${copyVisible ? 'visible' : ''}`}>
                 <span className="inline-grid place-items-center w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-[#22222b] text-[#cfcfc8] font-extrabold text-xs sm:text-sm md:text-base flex-shrink-0">03</span>
-                Swap crypto and receive NGN instantly
+                Receive NGN instantly
               </li>
             </ol>
           </div>

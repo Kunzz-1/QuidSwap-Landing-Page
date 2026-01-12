@@ -1,5 +1,5 @@
 :root {
-  --bg: #ffffff;
+  --bg: #e9daeb;
   --text: #ac71e3;
   --muted: #5c5c70;
   --primary: #1f5eff;
@@ -392,7 +392,7 @@
   }
 }
 .story {
-  background: #ffffff;
+  background: #FDFCF8;
   color: #ac71e3;
   padding: 72px 0;
 }
@@ -523,7 +523,7 @@
   }
 }
 .account {
-  background: #ffffff;
+  background: #FDFCF8;
   color: #ac71e3;
   padding: 72px 0;
 }
@@ -674,12 +674,12 @@
   }
 }
 .cards {
-  background: #ffffff;
+  background: #FDFCF8;
   color: #ac71e3;
   padding: 72px 0;
 }
 .testimonials {
-  background: #ffffff;
+  background: #FDFCF8;
   color: #ac71e3;
   padding: 72px 0;
 }
@@ -796,7 +796,7 @@
 }
 
 .community {
-  background: #ffffff;
+  background: #FDFCF8;
   color: #ac71e3;
   padding: 72px 0;
 }
@@ -848,7 +848,7 @@
   }
 }
 .faq {
-  background: #fbf7e6;
+  background: #FDFCF8;
   padding: 48px 0;
 }
 .faq-inner {

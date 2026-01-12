@@ -1,5 +1,5 @@
 .testimonials {
-  background: #ffffff;
+  background: #FDFCF8;
   color: #ac71e3;
   padding: clamp(48px, 8vw, 72px) 0;
 }
@@ -66,7 +66,7 @@
   color: #fff;
 }
 .t-card.light {
-  background: #fff;
+  background: #FDFCF8;
 }
 .t-card.orange {
   background: #ff8a1f;

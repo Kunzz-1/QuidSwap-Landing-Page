@@ -23,7 +23,7 @@ function FAQ() {
   ]
 
   return (
-    <section id="faq" className="bg-[#fefefe] py-12 sm:py-16 md:py-20">
+    <section id="faq" className="bg-[#d7c0db] py-12 sm:py-16 md:py-20">
       <div className="max-w-container mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="bg-primary text-white border border-white/25 rounded-3xl sm:rounded-[20px] p-6 sm:p-8 grid grid-cols-1 lg:grid-cols-[0.6fr_1fr] gap-6 sm:gap-8 overflow-hidden box-border">
           <div 
